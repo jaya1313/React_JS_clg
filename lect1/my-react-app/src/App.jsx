@@ -19,26 +19,54 @@ import React from 'react'
 //}
 
 //lect2
-import Home from './Home'
-import {New} from './Home'
-import {Component} from './Home'
+// import Home from './Home'
+//  import {New} from './Home'
+// import {Component} from './Home'
 
+// const App = () => {
+//   let user = "jayaaaaa"
+//   return (<>
+//   <div><Home/></div>
+//        <New/>
+//        <Component/>
+//        {/* //propss(properties)
+//        //transfer of data  App->Home->A */}
+
+//        <div> <Home data={user}/></div>
+//         </> 
+//   )
+// }
+
+
+//lect3
+//for printing in screen we use useState
+// import { useState } from 'react';
+// const App = () => {
+//   let [input, setInput] = useState("")
+//   let [data, setData] = useState('')
+//   function func1(e){
+//     //console.log(e.target.value);
+//     setInput(e.target.value) 
+//     console.log(input);
+//   }
+//   function done(){
+//      setData(data + " " +input)
+//   }
+
+//   return (
+//     <div>
+//    <h2>{data}</h2>
+//     <input type='text' name='input' placeholder='Enter your name' onChange={func1}></input>
+//     <button onClick={done}>Click</button>
+//      </div>
+//   )
+// }
+
+
+// FORM 
 const App = () => {
-  return (<>
-  <div><Home/></div>
-       <New/>
-       <Component/>
-        </> 
-  )
-}
-
-//propss(properties)
-
-const App2 = () =>{
-  let user = "jayaaaaa"
   return (
-    <div> <Home data={user}/></div>
+    <div>App</div>
   )
 }
-
 export default App

@@ -1,16 +1,17 @@
 import React from 'react'
+import A from './A'
 
-const Home = () => {
+const Home = ({data}) => {
   return (<>
     <div>Home</div>
     <h2>Hello</h2>
+    <A name={data}/>
     </>
   )
 }
 
 //new function                  //components
-const New = ({data}) =>{
-    console.log(data)
+const New = () =>{
     return (<>
         <div>New fileeeee</div>
         </>
@@ -21,6 +22,12 @@ const Component = ()=>{
     return (
         <p>this a component ,we have to expoert from here and import to app.jsx</p>
     )
+}
+
+const hello = () =>{
+      return (
+        <A/>
+      )
 }
 
 
