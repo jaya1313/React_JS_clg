@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // //for changes visible in screen wev use useState()
 // import { useState } from 'react'
@@ -64,18 +64,72 @@ import React from 'react'
 
 
 // FORM 
-import Form from './Form'
-const App = () => {
-  return (
-    <div>
-      <Form/>
-    </div>
-  )
-}
+// import Form from './Form'
+// const App = () => {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
 
 
 //lect4
 
+// useEffect -> it will not reload the site (prints or load only once when we click button)
+//counter function
 
+
+import { useEffect } from 'react';
+// const App = () => {
+//   let [count, SetCount] = useState(0);
+//   let [city, SetCity] = useState("Goa");
+//   //console.log("Hello")  // you see hello runs every time when we click button
+//   useEffect(()=>{
+//     console.log("hello");
+//   }, [city])  //if we give city , it only runs when city changes
+
+//   return (
+//     <div>
+//       <h2>{count}</h2>
+//       <h4>{city}</h4>
+//       <button onClick={()=>SetCount(count + 1)}> click </button>
+//       <button onClick={()=>SetCity("manali")}>Change</button>
+//     </div>
+//   )
+// }
+
+
+//fetching api
+
+export const App = () => {
+  let [ApiData,SetApiData] = useState([])
+  useEffect(()=>{
+    async function call() {
+      let res = await fetch('https://jsonplaceholder.typicode.com/todos')
+      let data = await res.json();
+      //console.log(data);
+      SetApiData(data)
+    }
+    call()
+  })
+  return (
+    <div>
+      { /* data show */ }
+      {
+        ApiData.map((a)=>{
+          return (
+            <div>
+              <h2>{a.id}</h2>
+              <h3>{a.title}</h3>
+            </div>
+          )
+        })
+      }
+
+
+    </div>
+  )
+}
 
 export default App
