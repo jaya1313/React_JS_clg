@@ -64,9 +64,18 @@ import React from 'react'
 
 
 // FORM 
+import Form from './Form'
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Form/>
+    </div>
   )
 }
+
+
+//lect4
+
+
+
 export default App
