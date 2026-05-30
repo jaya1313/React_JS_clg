@@ -1,4 +1,6 @@
-div{
+/* lect3 css (form) */
+
+/* div{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,4 +41,28 @@ button{
 background-color: rgb(232, 226, 198);
   box-shadow: rgba(239, 216, 216, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
+} */
+
+/* lect4 css (card format) */
+
+#parent_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+#card{
+  height: 250px;
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: black;
+  background-color: rgb(178, 160, 184);
+}
+
+img{
+  height: 200px;
+  width: 190;
+  object-fit: cover;
 }

@@ -101,27 +101,31 @@ import { useEffect } from 'react';
 
 
 //fetching api
+import './App.css'
 
 export const App = () => {
   let [ApiData,SetApiData] = useState([])
   useEffect(()=>{
     async function call() {
-      let res = await fetch('https://jsonplaceholder.typicode.com/todos')
+      let res = await fetch('https://dummyjson.com/products')
       let data = await res.json();
       //console.log(data);
-      SetApiData(data)
+      SetApiData(data.products)
+      //console.log(data.products)
     }
     call()
   })
   return (
-    <div>
+    <div id='parent_div'>
       { /* data show */ }
       {
         ApiData.map((a)=>{
           return (
-            <div>
+            <div id='card'>
+              
               <h2>{a.id}</h2>
-              <h3>{a.title}</h3>
+              <img src={a.thumbnail}/>
+              
             </div>
           )
         })
