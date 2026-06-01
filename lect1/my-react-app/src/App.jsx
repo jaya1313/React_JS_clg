@@ -101,39 +101,73 @@ import { useEffect } from 'react';
 
 
 //fetching api
+// import './App.css'
+
+// export const App = () => {
+//   let [ApiData,SetApiData] = useState([])
+//   useEffect(()=>{
+//     async function call() {
+//       let res = await fetch('https://dummyjson.com/products')
+//       let data = await res.json();
+//       //console.log(data);
+//       SetApiData(data.products)
+//       //console.log(data.products)
+//     }
+//     call()
+//   })
+//   return (
+//     <div id='parent_div'>
+//       { /* data show */ }
+//       {
+//         ApiData.map((a)=>{
+//           return (
+//             <div id='card'>
+              
+//               <h2>{a.id}</h2>
+//               <img src={a.thumbnail}/>
+              
+//             </div>
+//           )
+//         })
+//       }
+
+
+//     </div>
+//   )
+// }
+
+//lect5
+//minor project
+
+// basic input validation
 import './App.css'
-
 export const App = () => {
-  let [ApiData,SetApiData] = useState([])
-  useEffect(()=>{
+  let[search, SetSearch] = useState("")
+  console.log(search)
+  
     async function call() {
-      let res = await fetch('https://dummyjson.com/products')
-      let data = await res.json();
-      //console.log(data);
-      SetApiData(data.products)
-      //console.log(data.products)
+       if(!search.trim()){
+        alert("Search bar is empty")
+        return;
+       }
+       let res = await fetch(`https://dummyjson.com/products/search?q=${search}`)
+       let data = await res.json();
+       console.log(data);
     }
-    call()
-  })
+
+    function fun1(e){
+      SetSearch(e.target.value)
+    }
+
   return (
-    <div id='parent_div'>
-      { /* data show */ }
-      {
-        ApiData.map((a)=>{
-          return (
-            <div id='card'>
-              
-              <h2>{a.id}</h2>
-              <img src={a.thumbnail}/>
-              
-            </div>
-          )
-        })
-      }
-
-
-    </div>
-  )
+    <div>
+      <input type='text'  placeholder='Search by Name' onChange={fun1}/>
+      <button onClick={ call}>Click</button>
+    </div>  
+      )
 }
+
+
+
 
 export default App
