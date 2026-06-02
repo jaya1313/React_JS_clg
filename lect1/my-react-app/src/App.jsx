@@ -139,37 +139,60 @@ import { useEffect } from 'react';
 //lect5
 //minor project
 
-// basic input validation
-import Task from './Task'
-import './App.css'
-export const App = () => {
-  let[search, SetSearch] = useState("")
-  console.log(search)
+// // basic input validation
+// import Task from './Task'
+// import './App.css'
+// export const App = () => {
+//   let[search, SetSearch] = useState("")
+//   console.log(search)
   
-    async function call() {
-       if(!search.trim()){
-        alert("Search bar is empty")
-        return;
-       }
-       let res = await fetch(`https://dummyjson.com/products/search?q=${search}`)
-       let data = await res.json();
-       console.log(data);
-    }
+//     async function call() {
+//        if(!search.trim()){
+//         alert("Search bar is empty")
+//         return;
+//        }
+//        let res = await fetch(`https://dummyjson.com/products/search?q=${search}`)
+//        let data = await res.json();
+//        console.log(data);
+//     }
 
-    function fun1(e){
-      SetSearch(e.target.value)
-    }
+//     function fun1(e){
+//       SetSearch(e.target.value)
+//     }
 
-  return (
-    <div>
+  
+
+//   return (
+//     <div>
       
-      <input type='text'  placeholder='Search by Name' onChange={fun1}/>
-      <button onClick={ call}>Click</button>
-      <Task/>
-    </div>  
-      )
-}
+//       <input type='text'  placeholder='Search by Name' onChange={fun1}/>
+//       <button onClick={ call}>Check</button>
+//       <Task/>
+//     </div>  
+//       )
+// }
 
+//lect6
+
+//react router DOM
+import {Route, Routes} from "react-router-dom"
+import NavBar from './NavBar'
+import Home from './Home'
+import About from './About'
+import Task from './Task'
+
+const App = () =>{
+    return (
+        <div>
+            <NavBar/>
+           <Routes>  {  /* // it will not reload the page when we click on link */}
+                 <Route path='/' element={<Home/>}/> {/*  // when we click on home it will show home component */}
+                 <Route path='/about' element={<About/>}/>
+                 <Route path='/task' element={<Task/>}/>
+            </Routes>
+            </div>
+    )
+}
 
 
 

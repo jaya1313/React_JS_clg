@@ -44,7 +44,7 @@ background-color: rgb(232, 226, 198);
 } */
 
 /* lect4 css (card format) */
-
+/* 
 #parent_div{
   display: flex;
   justify-content: center;
@@ -58,7 +58,8 @@ background-color: rgb(232, 226, 198);
   width: 250px;
   border-radius: 20px;
   box-shadow: 2px 2px 5px rgb(8, 7, 7);
-  background-color: rgb(212, 207, 213);
+  background-color: rgb(202, 200, 202);
+  margin-top: 20px;
 }
 
 img{
@@ -73,4 +74,33 @@ input{
   border: 1px solid rgb(248, 246, 246);
   border-radius: 5px;
   font-size: 16px;
+  margin-top: 20px;
+  gap: 20px;
+  margin-right: 20px;
+}
+button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(232, 226, 198);
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(81, 8, 54);
+} */
+
+
+/* lect 6 css (react router DOM) */
+#nav{
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  color: snow;
 }
