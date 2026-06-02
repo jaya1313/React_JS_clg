@@ -140,6 +140,7 @@ import { useEffect } from 'react';
 //minor project
 
 // basic input validation
+import Task from './Task'
 import './App.css'
 export const App = () => {
   let[search, SetSearch] = useState("")
@@ -161,8 +162,10 @@ export const App = () => {
 
   return (
     <div>
+      
       <input type='text'  placeholder='Search by Name' onChange={fun1}/>
       <button onClick={ call}>Click</button>
+      <Task/>
     </div>  
       )
 }

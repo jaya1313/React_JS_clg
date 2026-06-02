@@ -54,15 +54,23 @@ background-color: rgb(232, 226, 198);
   
 }
 #card{
-  height: 250px;
-  width: 220px;
+  height: 300px;
+  width: 250px;
   border-radius: 20px;
-  box-shadow: black;
-  background-color: rgb(178, 160, 184);
+  box-shadow: 2px 2px 5px rgb(8, 7, 7);
+  background-color: rgb(212, 207, 213);
 }
 
 img{
   height: 200px;
   width: 190;
   object-fit: cover;
+}
+
+input{
+  width: 300px;
+  padding: 10px;
+  border: 1px solid rgb(248, 246, 246);
+  border-radius: 5px;
+  font-size: 16px;
 }
