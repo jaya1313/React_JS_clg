@@ -172,28 +172,41 @@ import { useEffect } from 'react';
 //       )
 // }
 
-//lect6
+// //lect6
 
-//react router DOM
-import {Route, Routes} from "react-router-dom"
-import NavBar from './NavBar'
-import Home from './Home'
-import About from './About'
-import Task from './Task'
+// //react router DOM
+// import {Route, Routes} from "react-router-dom"
+// import NavBar from './NavBar'
+// import Home from './Home'
+// import About from './About'
+// import Task from './Task'
 
-const App = () =>{
-    return (
-        <div>
-            <NavBar/>
-           <Routes>  {  /* // it will not reload the page when we click on link */}
-                 <Route path='/' element={<Home/>}/> {/*  // when we click on home it will show home component */}
-                 <Route path='/about' element={<About/>}/>
-                 <Route path='/task' element={<Task/>}/>
-            </Routes>
-            </div>
-    )
+// const App = () =>{
+//     return (
+//         <div>
+//             <NavBar/>
+//            <Routes>  {  /* // it will not reload the page when we click on link */}
+//                  <Route path='/' element={<Home/>}/> {/*  // when we click on home it will show home component */}
+//                  <Route path='/about' element={<About/>}/>
+//                  <Route path='/task' element={<Task/>}/>
+//             </Routes>
+//             </div>
+//     )
+// }
+
+
+//lect7
+//todo list
+
+import Todo from './Todo'
+
+export const App = () => {
+  return (
+    <div>
+        <Todo/>
+    </div>
+  )
 }
-
 
 
 export default App
