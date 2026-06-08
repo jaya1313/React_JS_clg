@@ -33,14 +33,28 @@ import React from 'react'
 // export{Component}
 // export {New}
 
+// const Home = () => {
+//   console.log("homee");
+
+//   return (
+//     <div>
+//      Home
+//     </div>
+//   )
+// }
+
+// lect 10
+import { useContext} from 'react'
+import Context from './Context'
+
 const Home = () => {
-  console.log("homee");
+let data = useContext(Context) //  it is used to get the value from context provider(from context file) and it is used in functional component only
+console.log(data);
 
   return (
-    <div>
-     Home
-    </div>
+    <div>{data}</div>  //it will print om in screen because we have given value as om in context provider in main.jsx
   )
 }
+
 
 export default Home

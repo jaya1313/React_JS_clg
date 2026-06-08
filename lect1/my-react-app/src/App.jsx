@@ -231,34 +231,52 @@
 import React from 'react'
 import {useReducer} from 'react'
 
-const App = () => {
-  function reducer(color, action){
-    if(action === "red"){
-      return "red"
-    }
-    else if(action === "green"){
-      return "green"
-    }
-    else if(action === "yellow"){
-      return "yellow"
-    }
-    else if(action === "blue"){
-      return "blue"
-    }
-    else{
-      return color
-    }
+// const App = () => {
+//   function reducer(color, action){
+//     if(action === "red"){
+//       return "red"
+//     }
+//     else if(action === "green"){
+//       return "green"
+//     }
+//     else if(action === "yellow"){
+//       return "yellow"
+//     }
+//     else if(action === "blue"){
+//       return "blue"
+//     }
+//     else{
+//       return color
+//     }
 
-  }
-  let [color, dispatch] = useReducer(reducer, "white") //it will return the current state and a dispatch function which we can use to update the state and the initial state is white
+//   }
+//   let [color, dispatch] = useReducer(reducer, "white") //it will return the current state and a dispatch function which we can use to update the state and the initial state is white
+//   return (
+//     <div style={{backgroundColor: color, height: "100vh"}}> {/* it will set the background color of the div to the current state and also set the height of the div to 100vh */}
+//       <button onClick={() => dispatch("red")}>Red</button>
+//       <button onClick={() => dispatch("green")}>Green</button>
+//       <button onClick={() => dispatch("yellow")}>Yellow</button>
+//       <button onClick={() => dispatch("blue")}>Blue</button>
+//     </div>
+//   )
+// }
+
+// lect 10
+// useContext -> it is used to share data between components without passing props through every level of the component tree
+
+// tree- main -> App -> home ...
+// if we want to share data from main to home we have to pass props from main to App and then from App to home but with useContext we can directly share data from main to home without passing props through every level of the component tree.
+
+import Home from './Home'
+import Context from './Context'
+
+ const App = () => {
   return (
-    <div style={{backgroundColor: color, height: "100vh"}}> {/* it will set the background color of the div to the current state and also set the height of the div to 100vh */}
-      <button onClick={() => dispatch("red")}>Red</button>
-      <button onClick={() => dispatch("green")}>Green</button>
-      <button onClick={() => dispatch("yellow")}>Yellow</button>
-      <button onClick={() => dispatch("blue")}>Blue</button>
+    <div>
+      <Home/> // it will print om in screen because we have given value as om in context provider in main.jsx
     </div>
   )
 }
+
 
 export default App
