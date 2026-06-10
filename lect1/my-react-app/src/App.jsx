@@ -1,4 +1,4 @@
-// import React, { useState } from 'react'
+import { useState } from 'react'
 
 // // //for changes visible in screen wev use useState()
 // // import { useState } from 'react'
@@ -19,7 +19,7 @@
 // //}
 
 // //lect2
-// // import Home from './Home'
+ import Home from './Home'
 // //  import {New} from './Home'
 // // import {Component} from './Home'
 
@@ -267,16 +267,49 @@ import {useReducer} from 'react'
 // tree- main -> App -> home ...
 // if we want to share data from main to home we have to pass props from main to App and then from App to home but with useContext we can directly share data from main to home without passing props through every level of the component tree.
 
-import Home from './Home'
-import Context from './Context'
+// import Home from './Home'
+// import Context from './Context'
 
- const App = () => {
+//  const App = () => {
+//   return (
+//     <div>
+//       <Home/> // it will print om in screen because we have given value as om in context provider in main.jsx
+//     </div>
+//   )
+// }
+
+
+// import NavBar from "./NavBar"
+
+// import { Route, Routes } from "react-router-dom"
+// import Cart from "./Cart"
+
+// const App = () => {
+//   let [apiData,SetApiData] =   useState([])
+//  let [cart,SetCart]= useState([])
+//   return (
+
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+//         <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+
+//lect14  //todo list using useContext
+
+import Todo2 from './Todo2'
+const App = () => {
   return (
     <div>
-      <Home/> // it will print om in screen because we have given value as om in context provider in main.jsx
+      <Todo2/>
     </div>
   )
 }
-
 
 export default App

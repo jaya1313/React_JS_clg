@@ -1,17 +1,35 @@
+// import { StrictMode } from 'react'
+// import { createRoot } from 'react-dom/client'
+// import './index.css'
+// import App from './App.jsx'
+// import {BrowserRouter} from 'react-router-dom'
+// import { createContext } from 'react'
+// import Context from './Context.jsx'
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Context.Provider value="om">
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//     </Context.Provider>
+//   </StrictMode>,
+// )
+
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+// import './index.css'
 import App from './App.jsx'
-import {BrowserRouter} from 'react-router-dom'
-import { createContext } from 'react'
 import Context from './Context.jsx'
-
+import { BrowserRouter } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Context.Provider value="om">
-    <BrowserRouter>
-      <App />
+   <BrowserRouter> 
+   <Context>
+    <App />
+    </Context>
     </BrowserRouter>
-    </Context.Provider>
+
   </StrictMode>,
 )
