@@ -19,7 +19,7 @@ import { useState } from 'react'
 // //}
 
 // //lect2
- import Home from './Home'
+ //import Home from './Home'
 // //  import {New} from './Home'
 // // import {Component} from './Home'
 
@@ -303,11 +303,51 @@ import {useReducer} from 'react'
 
 //lect14  //todo list using useContext
 
-import Todo2 from './Todo2'
+// import Todo2 from './Todo2'
+// const App = () => {
+//   return (
+//     <div>
+//       <Todo2/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// toggle (dark to light mode)
+
+// import React from 'react'
+// import DarkLight from './DarkLight'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <DarkLight/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+//react router dom
+
+import NavBar from './NavBar'
+import {Routes} from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import About from './About'
+import Home from './Home'
+import Task from './Task'
+
 const App = () => {
   return (
     <div>
-      <Todo2/>
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/task' element={<task/>}/>
+      </Routes>
     </div>
   )
 }
