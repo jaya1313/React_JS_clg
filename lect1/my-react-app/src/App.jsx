@@ -332,22 +332,42 @@ import {useReducer} from 'react'
 
 //react router dom
 
-import NavBar from './NavBar'
-import {Routes} from 'react-router-dom'
-import { Route } from 'react-router-dom'
-import About from './About'
-import Home from './Home'
-import Task from './Task'
+// import NavBar from './NavBar'
+// import {Routes} from 'react-router-dom'
+// import { Route } from 'react-router-dom'
+// import About from './About'
+// import Home from './Home'
+// import Task from './Task'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path='/' element={<Home/>}/>
+//         <Route path='/about' element={<About/>}/>
+//         <Route path='/task' element={<task/>}/>
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 
 const App = () => {
+ let [count,SetCount]=   useState(0)
+ let res=0
+ for(let i=0;i<100000000;i++){
+  res+=i
+
+ }
   return (
     <div>
-      <NavBar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/task' element={<task/>}/>
-      </Routes>
+      <h1>{res}</h1>
+      <h1>{count}</h1>
+      <button onClick={()=>SetCount(count+1)}>add</button>
     </div>
   )
 }
