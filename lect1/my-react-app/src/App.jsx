@@ -360,7 +360,7 @@ const App = () => {
  let [count,SetCount]=   useState(0)
  let res=0
  for(let i=0;i<100000000;i++){
-  res+=i
+  res+=i;
 
  }
   return (
