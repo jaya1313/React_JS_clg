@@ -356,20 +356,159 @@ import {useReducer} from 'react'
 
 
 
-const App = () => {
- let [count,SetCount]=   useState(0)
- let res=0
- for(let i=0;i<100000000;i++){
-  res+=i;
+// const App = () => {
+//  let [count,SetCount]=   useState(0)
+//  let res=0
+//  for(let i=0;i<100000000;i++){
+//   res+=i;
 
- }
+//  }
+//   return (
+//     <div>
+//       <h1>{res}</h1>
+//       <h1>{count}</h1>
+//       <button onClick={()=>SetCount(count+1)}>add</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// lect14
+
+// profill
+
+// const App = () => {
+
+//   //console.log(Array.prototype);
+
+//   let arr = [1,2,3,4];
+//   console.log(arr.toString());
+//   // Array.prototype.fun1 = function(){
+//   //   console.log("hello");
+//   // }
+//   //arr.fun1();
+//   //console.log(Array.prototype);
+//   //console.log(Object.prototype);
+//   console.log(String.prototype);
+//   return (
+//     <div>App</div>
+//   )
+// }
+ //export default App
+
+
+// map func
+
+//const App = () => {
+
+  // let arr = [1,2,3,4]
+  // let data = arr.map((a,b,c)=>{  // map function return an empty array, a returns each val of arr, b returns index of arr, and c returns the whole array
+
+  //   console.log(a);
+  // })  
+
+  // customized map function
+
+//   Array.prototype.jfilter=function(cb){
+//     let res =[];
+//     for(let i=0; i<this.length;i++){
+//         res.push(this[i],i,this);
+//       }
+      //return res;
+//     }
+  
+
+//   let arr = [1,3,5,7];
+//   let data = arr.jfilter((a,b,c)=>{
+//     return a>2;
+//   })
+//   console.log(data);
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+
+//  export default App 
+
+//customized filter  function
+
+//const App = () => {
+//   Array.prototype.jfilter=function(cb){
+//     let res =[];
+//     for(let i=0; i<this.length;i++){
+//       if(cb(this[i],i,this)){
+//         res.push(this[i]);
+//       }
+//     }
+//     return res;
+//   }
+
+//   let arr = [1,3,5,7];
+//   let data = arr.jfilter((a,b,c)=>{
+//     return a>2;
+//   })
+//   console.log(data);
+//   return (
+//     <div>App</div>
+//   )
+//}
+
+//customized forEach function, hence  it doesnot return any error.
+
+// const App = () => {
+
+//     Array.prototype.jforEach=function(cb){
+//     for(let i=0; i<this.length;i++){
+//         cb(this[i],i,this);
+//       }
+//     }
+
+//   let arr = [1,3,5,7];
+//   let data = arr.jforEach((a,b,c)=>{
+//     return a>2;
+//   })
+//   console.log(data);
+  
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+
+//reduce function
+// const App = () => {
+//   let arr = [1,2,3,4];
+//   let data = arr.reduce((a,b,c,d)=>{  
+//     return a+b;  // it returns the sum of arr, in this a represent default val i.e. 10 and b represents 1.
+
+//   }, 10);
+//   console.log(data);
+
+// }
+// customized reduce function
+
+const App = () => {
+  Array.prototype.jreduce=function(cb, initialVal){
+    let sum = initialVal;
+    for(let i=0; i<this.length;i++){
+
+      sum = cb(sum,this[i])
+      
+      }
+      return sum;
+    }
+
+  let arr = [1,3,5,7];
+  let data = arr.jreduce((a,b,c,d)=>{
+    return a+b;
+  },10);  // initial value can be given as 0 to proceed with arr's first val.
+  console.log(data);
   return (
-    <div>
-      <h1>{res}</h1>
-      <h1>{count}</h1>
-      <button onClick={()=>SetCount(count+1)}>add</button>
-    </div>
+    <div>App</div>
   )
 }
+
 
 export default App
