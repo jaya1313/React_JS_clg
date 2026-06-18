@@ -489,28 +489,36 @@ import {useReducer} from 'react'
 // }
 // customized reduce function
 
-const App = () => {
-  Array.prototype.jreduce=function(cb, initialVal){
-    let sum = initialVal;
-    for(let i=0; i<this.length;i++){
+// const App = () => {
+//   Array.prototype.jreduce=function(cb, initialVal){
+//     let sum = initialVal;
+//     for(let i=0; i<this.length;i++){
 
-      sum = cb(sum,this[i])
+//       sum = cb(sum,this[i])
       
-      }
-      return sum;
-    }
+//       }
+//       return sum;
+//     }
 
-  let arr = [1,3,5,7];
-  let data = arr.jreduce((a,b,c,d)=>{
-    return a+b;
-  },10);  // initial value can be given as 0 to proceed with arr's first val.
-  console.log(data);
+//   let arr = [1,3,5,7];
+//   let data = arr.jreduce((a,b,c,d)=>{
+//     return a+b;
+//   },10);  // initial value can be given as 0 to proceed with arr's first val.
+//   console.log(data);
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// export default App
+import Chatbot from './Chatbot'
+
+const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Chatbot/>
+    </div>
   )
 }
 
-
-// export default App
 export default App
-
